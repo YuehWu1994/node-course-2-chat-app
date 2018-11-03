@@ -23,10 +23,11 @@ io.on('connection', (socket) => {
 
   socket.broadcast.emit('newMessage', generateMessage('Admin', 'new use joined'));
 
-  socket.on('createMessage', (message) => {
-    //console.log('createMessage', newMessage);
+  socket.on('createMessage', (message, callback) => {
+    console.log('createMessage', message);
     io.emit('newMessage', generateMessage(message.from, message.text));
-
+    callback('this is from server'
+    );
     //broadcast: only received by other user
     // socket.broadcast.emit("newMessage", {
     //     from: newMessage.from,
