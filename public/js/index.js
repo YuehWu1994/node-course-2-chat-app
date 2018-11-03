@@ -3,11 +3,6 @@ var socket = io();
 socket.on('connect', function(){
   console.log('connect to server');
 
-
-  socket.emit('createMessage', {
-    from: 'fasfsjfklsfj@gmail.com',
-    text: "this is Hack"
-  })
 });
 
 socket.on('disconnect', function() {
