@@ -28,6 +28,6 @@ describe('generateLocationMessage', () => {
 
     var message = generateLocationMessage(from, latitude, longitude);
     expect(typeof message.createdAt).toBe('number');
-    expect(message).toMatchObject({from, url});node
+    expect(message).toMatchObject({from, url});
   });
 })
